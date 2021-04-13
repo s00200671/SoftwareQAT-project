@@ -42,8 +42,8 @@ namespace TestingApp.tests
         // over 35 and 50, female
         public void gender_age_3()
         {
-            // Initally premium set to 2.5 since they are female and over 36, then multiplied by 0.15 since they are over 50
-            ExpectedResult = 0.375;
+            // Initally premium set to 3.5 since they are female and over 30, then halved since they are over 50
+            ExpectedResult = 1.75;
             double ActualResult = insuranceService.CalcPremium(50, "female");
             Assert.AreEqual(ExpectedResult, ActualResult);
         }
